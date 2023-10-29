@@ -1,0 +1,191 @@
+:root {
+  --blue: #024554;
+  --gray: #53736a;
+  --green: #6a8c69;
+  --lime: #a8b545;
+  --silver: #c2c0a6;
+}
+body {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  color: whitesmoke;
+  background-color: var(--gray);
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ all h tag like h1,h2 ,... are taking 1em spacing in top and bottom
+so to remove that behaviour will give margin to 0 .
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+#intro {
+  padding: 4rem 1rem 5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#intro p {
+  font-size: 1.5rem;
+  color: var(--silver);
+  line-height: 1.5;
+}
+
+#intro h2 {
+  font-size: 3rem;
+  font-weight: normal;
+}
+
+.name span {
+  display: block;
+  color: white;
+  font-size: 4rem;
+}
+
+.profile {
+  padding-bottom: 1.5rem;
+}
+.experienceWrapper{
+    background-color: var(--blue);
+}
+#experience-Header{
+    margin: 0 auto;
+    font-size: 3rem;
+    width: 200px;
+    padding: 1rem;
+}
+#experience{
+   height: 450px;
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+
+}
+
+#experience ul {
+  /* ul tag gives some margin and padding so removing them */
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+  border: 3px solid var(--silver);
+  border-radius: 18px;
+  background-color: var(--blue);
+}
+#experience li {
+  /* used to remove dot comes before li elements */
+  list-style-type: none;
+  padding: 1rem;
+}
+
+.myProfilePic{
+    max-width: 400px;
+}
+.myProfilePic img{
+    width: 100%;
+    border-radius: 18px;
+}
+
+#hire {
+  width: 400px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+#hire p:last-child {
+  margin-top: 3rem;
+}
+/* this secton takes whole width of parent so to apply background color in whole 
+part wrapped in this parent section.
+*/
+.hireme {
+  background-color: var(--blue);
+}
+
+nav {
+  font-size: 80%;
+  padding: 1rem;
+  background-color: var(--green);
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  /* 
+    this flex-flow  property will wrap the content to next line start from right side
+    if the screen size become smaller than it's content.
+    */
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  font-size: x-large;
+  margin-right: 2rem;
+}
+
+nav a {
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+/* this property will assign remaning width to first child */
+nav a:hover {
+  color: var(--blue);
+  text-decoration: underline;
+}
+nav li:first-child {
+  /* this will take 100% of width */
+  flex-basis: 100%;
+  margin-left: 7rem;
+}
+
+.btn {
+  background-color: orangered;
+  padding: 0.7rem;
+  border-radius: 16px;
+}
+
+.btn:hover {
+  color: white;
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(26, 61, 102, 1) 100%
+  );
+}
+
+.gradient-section {
+  height: 2px;
+  background: radial-gradient(
+    circle,
+    rgba(238, 209, 174, 1) 11%,
+    rgba(26, 93, 102, 1) 82%
+  );
+}
+footer{
+    text-align: center;
+    padding: 2rem 0;
+}
+
+@media (min-width: 600px) {
+  nav li:first-child {
+    flex-grow: 1;
+    flex-basis: auto;
+  }
+}
